@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+    <title>ANIMEFLIX | Watch anime on any platform</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="copyright" content="Anime 404 Balkan"/>
+	<meta name="author" content="Ciker"/>
+	<meta name="Generator" content="Anime 404 Balkan">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="ANIMEFLIX, Watch anime movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more. Without ads for free!">
+	<meta name="Keywords" content="animeflix, anime, anime stream, anime free, watch, tv, iphone, android, windows, free">	
+	<meta property="og:title" content="ANIMEFLIX | Watch anime on any platform"/>
+	<meta property="og:url" content="https://anime404balkan.github.io/"/>
+	<meta property="og:site_name" content="ANIMEFLIX | Watch anime on any platform"/>
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="ANIMEFLIX, Watch anime movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more. Without ads for free!"/>
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="ANIMEFLIX | Watch anime on any platform" />
+	<meta name="twitter:description" content="ANIMEFLIX, Watch anime movies & TV shows online or stream right to your smart TV, game console, PC, Mac, mobile, tablet and more. Without ads for free!" />
+	<meta http-equiv="content-language" content="en-US">
+	<meta name="theme-color" content="#734ba9">
+	<link rel="canonical" href="https://anime404balkan.github.io/" />
+	<meta name="google-site-verification" content="VSfq1rCPixS1lwdbx3h1UWydyEOH8c7tOzrNY2IQe94" />
+	<script type="application/ld+json"> { 
+		"@context" : "http://schema.org",
+		"@type" : "Organization", 
+		"name":"Anime 404 Balkan",
+		"url":"https://anime404balkan.github.io/",
+		"email":"cik3r@protonmail.com"
+	} </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./vue.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-91666939-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-91666939-5');
+</script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="top">
+            <div class="nav-bar">
+                <div class="logo">
+                    <h1 class="logo"><span style="color:#551A8B">ANIME</span>FLIX</h1>
+                </div>
+            </div>
+            <div class="main">
+                <div class="submain">
+                    <h1><span style="color:#551A8B">ANIME</span>FLIX</h1>
+                    <p class="sub-heading">Best experience in the anime land</p>
+                    <p>Watch for free anime on any platform!</p>
+                    <div class="buttons">
+                        <button @click="goToLink(link)">
+                            <i color="black" class="fab" :class="{'fa-windows': system === 'windows', 'fa-apple': system === 'mac'}"></i>
+                            <a target="_blank">DOWNLOAD</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="the_pic">
+                    <div class="imazhi"></div>
+                    <img src="http://www.stickpng.com/assets/images/580b57fbd9996e24bc43bfe6.png" alt="">
+      </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="highlight-card">
+                    <i class="fas fa-users fa-4x"></i>
+                    <div>
+                        <h3>User Experience</h3>
+                        <p style="max-width:200px;">We built the application with you in mind. The essence of it is to make your experience as good as can be. That's why we implemented Autoplay, Next Episode, and Resume playing. You can expect the Skip Intro feature soon enough too ! </p>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-pen-nib fa-4x"></i>
+                    <div>
+                        <h3>Beautiful User Interface</h3>
+                        <p style="max-width:200px;">When we started building this app, having a simple and yet beautiful user interface was one of the main goals. There is nothing fancy about it, but the usability does make up for all of that, and then some.</p>
+                    </div>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-object-group fa-4x" style="margin-top:2px;"></i>
+                    <div>
+                        <h3>Responsive Design</h3>
+                        <p style="max-width:200px;">You can resize the window to any proportion you wanted. The styling of the application makes it easy to adapt to smaller screen sizes or even portrait modes.</p>
+                    </div>
+                </div>
+            </div>
+     
+        </div>
+</body>
+<script>
+var app = new Vue({
+    el: '#app',
+    computed: {
+        system() {
+            if (navigator.platform.indexOf('Mac') > -1) return 'mac';
+            return 'windows';
+        },
+        link() {
+            if (this.system === 'linux') {
+                return 'https://github.com/animeflix/Releases/raw/master/animeflix-linux-0.0.1.zip';
+            }
+            return 'https://github.com/animeflix/Releases/raw/master/animeflix-win-0.0.1.zip';
+        },
+    },
+    methods: {
+        goToLink(link) {
+            window.open(link, '_blank');
+        }
+    }
+})
+</script>
+
+</html>
